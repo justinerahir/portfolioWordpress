@@ -1,0 +1,752 @@
+@import url('reset.css');
+
+@font-face {
+    font-family: 'RopaSansRegular';
+    src: url('font/Ropasans/RopaSans-Regular-webfont.eot');
+    src: url('font/Ropasans/RopaSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/Ropasans/RopaSans-Regular-webfont.woff') format('woff'),
+         url('font/Ropasans/RopaSans-Regular-webfont.ttf') format('truetype'),
+         url('font/Ropasans/RopaSans-Regular-webfont.svg#RopaSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BreeSerifRegular';
+    src: url('font/Bree/BreeSerif-Regular-webfont.eot');
+    src: url('font/Bree/BreeSerif-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/Bree/BreeSerif-Regular-webfont.woff') format('woff'),
+         url('font/Bree/BreeSerif-Regular-webfont.ttf') format('truetype'),
+         url('font/Bree/BreeSerif-Regular-webfont.svg#BreeSerifRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@jaune: #D8B213;
+@gris: #2D2F33;
+
+.rounded-corners (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+  behavior: url(scripts/PIE.htc);
+}
+
+.box-shadow {
+	box-shadow: 2px 2px 4px #777;
+}
+
+.border-bottom {
+	border-bottom: 1px dashed @jaune;
+}
+
+.span16 {
+	width: 100%;
+}
+
+.span14 {
+	width: 87.5%;
+}
+
+.span13 {
+	width: 81.25%; 
+}
+
+.span12 {
+	width: 75%;
+}
+
+.span10 {
+	width: 62.5%;
+}
+
+.span9 {
+	width: 56.25%;
+}
+
+.span8 {
+	width: 50%;	
+}
+
+.span6 {
+	width: 37.5%;	
+}
+
+.span5 {
+	width: 31.25%;	
+}
+
+.span4 {
+	width: 25%;
+}
+
+.span3 {
+	width: 18.75%;
+}
+
+.span2 {
+	width: 12.5%;	
+}
+
+// PROPRIETES COMMUNES
+
+html {
+	background-image: url('../../uploads/2013/01/bg.jpg');
+	border-top: 6px solid @jaune;
+}
+
+body {
+	font: 16px 'RopaSansRegular', "Arial", cursive;
+	background-image: url('../../uploads/2013/01/bg.jpg');
+	margin: 0 auto;
+}
+
+h3, h4, #comments h5 {
+	color: @jaune;
+	font-family: 'BreeSerifRegular';
+	width: 75%;
+	text-transform: uppercase;
+}
+
+h6 {
+	font-size: 20px;
+	text-transform: uppercase;
+	margin-bottom: 0.3em;
+}
+
+.icones li {
+	display: inline;
+
+	a {
+		position: relative;
+		left: 2em;
+		height: 2em;
+		padding: 1.2em;
+		list-style-type: none;
+		background: transparent url("http://www.justinerahir.be/wordpress/wp-content/uploads/2013/01/spriteIcones.png") no-repeat;
+	}
+
+	.twitter {
+		background-position: -80px 0px;
+	}
+
+	.twitter:hover {
+		background: transparent url("http://www.justinerahir.be/wordpress/wp-content/uploads/2013/01/spriteIcones2.png") no-repeat; 
+		background-position: -80px 0px;
+	}
+
+	.email {
+		background-position:  -120px 0px;
+	}
+
+	.email:hover {
+		background: transparent url("http://www.justinerahir.be/wordpress/wp-content/uploads/2013/01/spriteIcones2.png") no-repeat; 
+		background-position: -120px 0px;
+	}
+
+	.linked {
+		background-position:  -40px 0px;
+	}
+
+	.linked:hover {
+		background: transparent url("http://www.justinerahir.be/wordpress/wp-content/uploads/2013/01/spriteIcones2.png") no-repeat; 
+		background-position: -40px 0px;
+	}
+
+	.facebook:hover {
+		background: transparent url("http://www.justinerahir.be/wordpress/wp-content/uploads/2013/01/spriteIcones2.png") no-repeat; 
+	}
+}
+
+.none {
+	display: none;
+}
+
+// HEADER
+
+#top-bar {
+
+	background: url('../img/navy_blue.png') repeat;
+	position: relative;
+
+	.logo {
+		text-indent: -9999px;
+		background-image: url('../../uploads/2013/01/logoDef.png');
+		display: block;
+		width: 153px;
+		height: 130px;
+		margin-left: 2em;
+		position: relative;
+		top: -0.5em;
+	}
+
+	h2 {
+		font-size: 30px;
+		color: @jaune;
+		position: absolute;
+		left: 7em;
+		top: 0.5em;
+	}
+}
+
+.menu-menuprincipal-container {
+	text-align: right;
+	left: -2em;
+	position: relative;
+	top: -3em;
+
+
+	li {
+		display: inline-block;
+	}
+
+	a {
+		text-decoration: none;
+		color:  @jaune;
+		font-size: 20px;
+		border-top: 1px solid  @jaune;
+		border-bottom: 1px solid  @jaune;
+		margin: 0.5em;
+		padding: 0.3em 0.5em;
+		-webkit-transition-duration: 0.2s;  
+		-webkit-transition-timing-function: ease-in;  
+		-moz-transition-duration: 0.2s;  
+		-moz-transition-timing-function: ease-in; 
+	}
+
+	a:hover {
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
+}
+
+// FOOTER 
+footer {
+	color: @gris;
+	padding: 1em 0;
+	background-color: @jaune;
+	height: 5em;
+	margin-top: 8em;
+
+	img {
+		position: absolute;
+		border: 1px solid @jaune;
+		.rounded-corners;
+		margin-left: 2em;
+		margin-top: -3em;
+	}
+
+	div.footer-contact {
+		margin-left: 0em;
+		border-left: 1px dashed @gris;
+		padding-left: 3em;
+	}
+
+	a{
+		color: @gris;
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
+}
+
+.top{
+	border: none;
+	margin-right: 2em;
+	float: right;
+
+	img {
+		position: relative;
+		border: none;
+	}
+}
+
+.footer-infos div {
+	.span2;
+	float: left;
+	margin-left: 10em;
+}
+
+// CONTENT PROPRIETES COMMUNES 
+#content h2 {
+	display: none;
+}
+
+.sidebar {
+	.rounded-corners;
+	.box-shadow;
+	.span4;
+	float:left;
+	background-color: @gris;
+	color: white;
+	margin: 0 2em;
+	padding-bottom: 0.5em;
+	margin-bottom: 2em;
+
+	h3 {
+		letter-spacing: 0.1em;
+		text-align: center;
+		.border-bottom;
+		padding: 0.1em 0em 0.2em 0em;
+		margin: 0 auto;
+		text-shadow: 1px 1px 4px grey;
+		font-size: 55px;
+	}
+
+	p{
+		margin: 2em auto;
+		font-size: 16px;
+		width: 80%;
+	}
+
+	p.desc, p.moi {
+		.border-bottom;
+		padding-bottom: 1em;
+		font-size: 16px;
+	}
+}
+
+.contenu {
+	margin: 2em 2em 6em 30%;
+	background-color: white;
+	padding: 0.2em 1.3em;
+	.rounded-corners;
+	.box-shadow;
+	position: relative;
+
+	h3 {
+		.border-bottom;
+		font-size: 40px;
+		width: 60%;
+	}
+
+	.link {
+		.rounded-corners;
+		display: inline-block;
+		background-color: @jaune;
+		color: @gris;
+		text-decoration: none;
+		padding: 0.4em;
+	}
+
+	.link:hover {
+		background-color: @gris;
+		color: @jaune;	
+	}
+}
+
+// CONTENT PAGE PORTFOLIO
+h4, #comments h5 {
+	font-size: 30px;
+	background-color: @jaune;
+	color: @gris;
+	.rounded-corners;
+	.box-shadow;
+	display: inline;
+	padding: 0.2em;
+	margin-left: -1em;
+}
+
+.contenu {
+	header {
+		margin-bottom: 1em;
+
+		a {
+			top: -1em;
+			left: 23.5em;
+			position: relative;
+		}
+	}
+}
+
+.thumbnail img {
+	width: 227px;
+	height: 142px;
+	margin-bottom: 1em;
+	border: 2px solid @gris;
+	.box-shadow;
+}
+
+.portfolio {
+	margin: 2em -0.5em;
+
+	li {
+		display:inline;
+		padding: 1em;
+		margin-left: 1.5em;
+		position: relative;
+	}
+
+	.rollover {
+		background-color: rgba(45,47,51,0.8);
+		position: absolute;
+		color: white;
+		width: 227px;
+		height: 142px;
+		left: 1em;
+		top: -8.25em;
+		text-align: center;
+		border: 2px solid #D8B213;
+		z-index:2;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	h5 {
+		font-size: 22px;
+		color: @jaune;
+		text-transform: uppercase;
+		padding: 0.5em;
+	}
+}
+
+// CONTENT PAGE A-PROPOS
+.about-bio {
+	.span8;
+	color: @gris;
+	float: left;
+	margin-bottom: 2em;
+}
+
+.about-desc {
+	font-size: 20px;
+	text-align: left;
+	font-family: 'BreeSerifRegular';
+	margin-bottom: 1em;
+}
+
+.about-photo {
+	.span5; 
+	float: right;
+	margin-right: 3em;
+
+	img{
+		position: relative;
+		z-index: 1;
+		left: 6em;
+		border: 3px solid @jaune;
+	}
+
+	.info {
+		.span14;
+		background-color: @jaune;
+		padding: 0.5em;
+		margin: 0.2em;
+		position: relative;
+		top: -10em;
+		font-size: 14px;
+		color: white;
+	}
+}
+
+.yellow {
+	color: @jaune;
+}
+
+li.sprite{
+	background: transparent url("http://www.justinerahir.be/wordpress/wp-content/uploads/2013/01/sprite.png") no-repeat;
+	padding: 0.3em;
+	position: relative;
+	list-style-type: none;
+	left: 8em;
+
+	span{
+		position: relative;
+		left:-7em;
+		color: #D8B213;
+		font-weight: bold;
+		font-size: 18px;
+	}
+}
+
+.skills {
+	margin-top: 2em;
+
+
+	li.level1 {
+		background-position: 0 1px;
+	}
+
+	li.level2 {
+		background-position: 0 -30px;
+	}
+
+	li.level3 {
+		background-position: 0 -60px;	
+	}
+
+	li.level4 {
+		background-position: 0 -90px;	
+	}
+
+	li.level5 {
+		background-position: 0 -124px;
+	}
+}
+
+.about-skills {
+	clear: both;
+	.span8;
+	margin-bottom: 2em;
+}
+
+// CONTENT PAGE BLOG 
+
+.news {
+	font-size: 20px;
+	font-family: 'BreeSerifRegular';
+	margin-bottom: 2em;	
+	.span12;
+}
+
+.article,.complete-article {
+	.span12;
+	position: relative;
+	color: @gris;
+
+	p {
+		margin: 2em 0em 3em 0em;
+		.border-bottom;
+		padding-bottom: 2em;
+		position: relative;
+	}
+}
+
+.complete-article p {
+	border:none;
+}
+
+date {
+	position: absolute;
+	top: -1.3em;
+	left: -1.2em;
+	font-size: 14px;
+}
+
+.more {
+	position: absolute;
+	left: 34.7em;
+	top: 5.5em;
+	width: 14%;
+}
+
+.complete-article a {
+	left: 23.5em;
+	top: 11.3em;
+}
+
+// CONTENT PAGE CONTACT 
+.form {
+	.span12;
+
+	form {
+		.span9;
+		.rounded-corners;
+		.box-shadow;
+		padding: 1em;
+		background-color: @jaune;
+		color: @gris;
+		margin-bottom: 4em;
+	}
+
+	input, textarea {
+		margin-bottom: 1.5em;
+		padding: 0.3em;
+		.rounded-corners;
+		background-color: @gris;
+		color:@jaune;
+		border: none;
+		font-family: 'BreeSerifRegular';
+		width: 14em;
+	}
+
+	input.wpcf7-submit {
+		cursor: pointer;
+		margin-left: 8.3em;	
+	}
+
+	label {
+		display: block;
+		float: left;
+		width: 110px;
+	}
+}
+
+.wpcf7-not-valid-tip {
+	border: none;
+	.rounded-corners;
+	color: @gris;
+	width: 100px;
+	position: absolute;
+	left: 17em;
+	top: -0.7em;
+}
+
+.italic {
+	margin-bottom: 2em;
+	display: block;
+}
+
+.direct {
+	.span4;
+	margin-bottom: 2em;
+
+	h6 {
+		margin-top: 1em;
+	}
+
+	a {
+		color: @jaune;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+/////////// MEDIA QUERIES ///////////
+
+@media screen and (max-width:960px) {
+	.sidebar h3 {font-size: 50px;}
+	.contenu {
+		h3 {font-size: 35px;}
+	}
+	.cat {left: 14em;}
+	.footer-infos div {.span3;}
+	// PORTFOLIO
+	.portfolio li {margin-left: 1em;}
+	// A PROPOS
+	.about-photo {.span6;
+		.info {width: 115%;}
+	}
+	// BLOG
+	.article h4 {font-size: 24px;}
+	.article {
+		a.more {width: 21%; left: 20.1em; top: 7.8em;}
+	}
+	.news {font-size: 18px;}
+	// CONTACT
+	.form form {.span16;}
+	.wpcf7-submit {margin-left:0em;}
+	.direct {.span5; position: relative; z-index:1;}
+}
+@media screen and (min-width: 768px) and (max-width:959px){
+	.sidebar {.span6;}
+	.contenu {margin-left: 45%;
+		h3 {font-size: 35px;}
+	}
+	.cat {left: 0em; top: 0.5em; margin-bottom: 1em; font-size: 14px;}
+	// A PROPOS
+	.about-bio, .about-skills {.span12;}
+	.about-photo {display: none;}
+	// BLOG
+	.article, .complete-article {.span16;
+		h4 {font-size: 20px; margin-left: -1.5em;}
+		a.more {width: 23%; position: relative; top: 0em; left: 0em; font-size: 14px;}
+		p {padding-bottom: 1em;}
+		date{font-size: 12px; left:-2em;}
+	}
+	// CONTACT 
+	.form form {.span16;}
+	.wpcf7-submit {margin-left:0em;}
+	.direct {.span8;}
+}
+@media screen and (min-width:480px) and (max-width: 767px) {
+	.sidebar {.span6;}
+	.contenu {margin-left: 45%;
+		.single-article {.span16;}
+	}
+	.cat {left: 0em; top: 0.5em; margin-bottom: 1em; font-size: 14px;}
+	// A PROPOS
+	.about-bio, .about-skills {.span12;}
+	.about-photo {display: none;}
+	// BLOG
+	.article, .complete-article {.span16;
+		h4 {font-size: 18px; margin-left: -1.5em;}
+		a.more {width: 24%; position: relative; top: 0em; left: 0em; font-size: 14px;}
+		p {padding-bottom: 1em;}
+		date{font-size: 12px; left:-2em;}
+	}
+	// CONTACT 
+	.form form {.span16;}
+	.wpcf7-submit {margin-left:10em;}
+	.direct {.span8;}
+}
+@media screen and (min-width:320px) and (max-width:480px) {
+	.sidebar {width: 85.25%; float:none; margin-left: 2em; margin-top: 2em;}  
+	.contenu {margin-left: 2em;
+		.single-article {.span16;}
+	}
+	.cat {left: 0em; top: 0.5em; margin-bottom: 1em; font-size: 14px;}
+	.menu-menuprincipal-container{ position:relative;top: 1em;left: 0em;.span16;text-align:center;
+		a {background-color: @jaune;color: @gris;.rounded-corners;margin: 0em;}
+	}
+	// A PROPOS
+	.about-bio, .about-skills {.span12;}
+	.about-photo {display: none;}
+	// BLOG
+	.article, .complete-article {.span16;
+		h4 {font-size: 20px; margin-left: -1.5em;}
+		a.more {width: 24%; position: relative; top: 0em; left: 0em; font-size: 14px;}
+		p {padding-bottom: 1em;}
+	}
+	// CONTACT 
+	.form form {.span16;}
+	.direct {.span8;}
+	// FOOTER
+	.footer-infos div{.span8; margin-top: -2em;}
+	.top{margin-right:1em;}
+	.footer-contact{display:none;}
+}
+@media screen and (max-width:320px) {
+	#top-bar h2 {display:none;}
+	.sidebar {width: 88%; float:none; margin-left: 1em; margin-top: 2em;}  
+	.contenu {margin-left: 1em; .span12;
+		.single-article {.span16;}
+		h3 {.span12;}
+	}
+	.cat {left: 0em; top: 0.5em; margin-bottom: 1em; font-size: 14px;}
+	.menu-menuprincipal-container{ position:relative;top: 1em;left: 0em;.span16;text-align:center;
+		a {background-color: @jaune;color: @gris;.rounded-corners;margin: 0em; font-size:17px;}
+	}
+	h4, #comments h5 {font-size: 22px;}
+	.portfolio li {margin-left: -0.5em;}
+	// A PROPOS
+	.about-bio, .about-skills {.span16;}
+	.about-photo {display: none;}
+	li.sprite span{font-size:16px;}
+	li.sprite {
+		background: transparent url("http://www.justinerahir.be/wordpress/wp-content/uploads/2013/01/sprite2.png") no-repeat;
+		padding: 0em;
+		width: 50%;
+	}
+	.skills {
+		margin-left: -1.5em;
+		li.level2 {background-position: 0px -20px;}
+		li.level3 {background-position: 0px -41px;}
+		li.level4 {background-position: 0px -62px;}
+		li.level5 {background-position: 0px -83px;}
+	}
+	// BLOG
+	.article, .complete-article {.span16;
+		h4 {font-size: 18px; margin-left: -1.5em;}
+		a.more {width: 33%; position: relative; top: 0em; left: 0em; font-size: 14px;}
+		p {padding-bottom: 1em;}
+	}
+	.news {.span16;}
+	// CONTACT 
+	.form form {.span16;}
+	input.wpcf7-submit {margin-left:0em;}
+	.direct {.span8;}
+	// FOOTER
+	.footer-infos div{.span8; margin-top: 0em; margin-left:2em;}
+	.top{margin-right:1em;}
+	.footer-contact{display:none;}
+	.footer-infos img {width: 62.2px; height: 76px;}
+	footer {height: 6em;}
+}
