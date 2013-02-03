@@ -2,7 +2,7 @@
 	get_header();
 ?>	
 	<section id="content">
-		<h1 class="none">Section content - sidebar + contenu</h1>
+		<h1 class="none">A propos - Ma biographie et mes compétences</h1>
 		<article class="sidebar">
 			<?php get_sidebar();?>
 		</article>

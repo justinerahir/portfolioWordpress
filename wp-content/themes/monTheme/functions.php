@@ -20,19 +20,19 @@
 		'script.js', 
 		get_bloginfo('template_directory') 
 		. "/scripts/script.js",
-		array( 'jquery' ) );
+		array('jquery'));
 
 		wp_enqueue_script( 
 		'modernizr.js', 
 		get_bloginfo('template_directory') 
 		. "/scripts/modernizr.js",
-		array( 'jquery' ) );
+		array('jquery'));
 
 		wp_enqueue_script( 
-		'jquery.heplbox.js', 
+		'jquery.simpletip-1.3.1.min.js', 
 		get_bloginfo('template_directory') 
 		. "/scripts/jquery.heplbox.js",
-		array( 'jquery' ) );
+		array('jquery'));
 	}
 	
 	if(! function_exists('monTheme_sidebars')){
@@ -126,7 +126,7 @@
 	if(! function_exists('custom_excerpt_more')){
 		function custom_excerpt_more($more) {
   		 	global $post;
-   			return '… <a class="more link" title="' . get_the_title($post->ID) . '" href="' . get_permalink($post->ID) . '">' . 'Lire la suite »' . '</a>';
+   			return '… <br><a class="more link" title="' . get_the_title($post->ID) . '" href="' . get_permalink($post->ID) . '">' . 'Lire la suite »' . '</a>';
 		}
 	}
 

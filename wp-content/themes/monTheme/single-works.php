@@ -1,7 +1,7 @@
 <?php get_header();?>	
 <section id="content">
+		<h1 class="none">Description détaillée de mon travail</h1>
 		<article class="sidebar"><?php get_sidebar();?></article>
-
 		<article class="contenu">
 			<?php 
 				if(have_posts()):

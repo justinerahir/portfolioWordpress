@@ -1,5 +1,5 @@
 <?php wp_footer();?>
-	<h1 class="none">Section footer</h1>
+	<h1 class="none">Mes coordonnées</h1>
 	<footer>
 		<div class="top">
 			<a href="#top-bar">

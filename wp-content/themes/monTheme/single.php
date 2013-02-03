@@ -3,6 +3,7 @@
 	get_header();
 ?>	
 	<section id="content">
+		<h1 class="none">Article de mon blog en entiereté</h1>
 		<article class="sidebar">
 			<?php get_sidebar();?>
 		</article>

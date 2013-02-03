@@ -6,7 +6,7 @@
 		Du webdesign, du graphisme et encore pleins d'autres belles choses ;-) 
 	</p>
 	<p class="moi">
-		Je m'appelle Justine, j'ai 21 ans et <br/> je suis une jeune <span class="yellow">graphiste</span> et <span class="yellow">webdesigner.</span>
+		Je m'appelle Justine, j'ai 21 ans et <br/> je suis une jeune <a href="index.html">graphiste</a> et <a href="index.html">webdesigner</a>.
 	</p>
 	<p class="follow">
 		Retrouvez-moi aussi par ici ! 

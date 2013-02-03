@@ -23,7 +23,7 @@
 				<h2><?php bloginfo('description'); ?></h2>
 			</hgroup>
 			<nav>
-				<h1 class="none">Section navigation</h1>
+				<h1 class="none">Menu du portfolio</h1>
 				<?php wp_nav_menu('header_menu');?>
 			</nav>
 		</header>

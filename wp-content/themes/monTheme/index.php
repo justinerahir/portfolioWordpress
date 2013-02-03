@@ -2,7 +2,7 @@
 	get_header();
 ?>	
 	<section id="content">
-		<h1 class="none">Section content - sidebar + contenu</h1>
+		<h1 class="none">Portfolio - Galerie des travaux</h1>
 		<section class="sidebar"><?php get_sidebar();?></section>
 		<?php 
 			if(have_posts()):
@@ -12,8 +12,8 @@
 			<section class="contenu">
 				<header>
 					<h3><?php the_title(); ?></h3>
-					<a href="#categorie-web" title="Découvrez mes travaux de web" class="link cat">Travaux de web</a>
-					<a href="#categorie-graph" title="Découvrez mes travaux de graphisme" class="link cat">Travaux de graphisme</a>
+					<a href="#" title="Découvrez mes travaux de web" class="link cat cat-web">Travaux de web</a>
+					<a href="#" title="Découvrez mes travaux de graphisme" class="link cat cat-graph">Travaux de graphisme</a>
 				</header>
 				<article id="categorie-web">
 					<h4>Web / Webdesign</h4>
